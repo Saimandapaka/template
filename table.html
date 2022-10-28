@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            
+        }
+        body{
+            display: flex;
+           
+        }
+
+        #img{
+           flex: 1;
+           width: 40%;
+           height: 100vh;
+        }
+
+        #img img{
+            margin-left: 20px;
+            margin-top: 200px;
+            width: 80%;
+            height: 100vh;
+        }
+
+       
+
+        h1{
+            background-color: #eaeaea;
+            color: rgb(212, 45, 45);
+            margin-bottom: 25px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .container{
+            background-color: rgb(84, 159, 234);
+            width: 60%;
+            padding: 20px;
+           
+            
+        }
+        #form{
+            width: 100%;
+            height: 115vh;
+            padding: 2px;
+            border: 2px solid #eaeaea;
+            background-color: rgb(84, 159, 234);
+        }
+
+       
+        
+        th{
+            padding: 5px;
+            background-color: #eaeaea;
+            color: red;
+            text-align: left;
+            border-radius: 8px;
+        }
+
+        .menu{
+            display: block;
+        }
+
+        select{
+            width: 98%;
+            height: 30%;
+        }
+
+        .check{
+            display: inline;
+            width: auto;
+            margin: auto 10px;
+        }
+        .rad{
+            display: inline;
+            width: auto;
+            margin: auto 10px;
+        }
+        .first-col{
+            width: 30%;
+        }
+        .sec-col{
+            width: 40%;
+        }
+        input{
+            display: block;
+            width: 98%;
+            height: 70%;
+            border: none;
+            outline: none;
+        }
+        input[type = submit]{
+            width: 120px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 20px;
+            background-color: red;
+            color: #eaeaea;
+        }
+        textarea{
+            width: 98%;
+            height: 100%;
+            resize: none;
+            outline: none;
+            border: none;
+        }
+
+        td{
+            padding: 5px;
+            background-color: #eaeaea;
+            border-radius: 8px;
+            color: purple;
+        }
+
+        @media only screen and (max-width: 1000px) and (min-width:600px){
+
+        }
+    </style>
+</head>
+<body>
+    <div id="img">
+       <img src="/finalImg.png" alt="">
+    </div>
+    
+    <div class="container">
+        <h1>Shine Clinic</h1>
+        <table id="form" border="1px">
+            <tr>
+                <td class="first-col"><a href="#admission_inf">Admission-info</a></td>
+                <td class="sec-col"><a href="#personal">Personal-info</a></td>
+                <td><a href="#payment_info">Payment-info</a></td>
+            </tr>
+            <tr>
+                <th colspan="3" id="admission_inf">
+                    Admission-information
+                </th>
+            </tr>
+            <tr>
+                <td id="dateofad" class="first-col">
+                    <label>Date of Admission:</label>
+                    <input type="date">
+                </td>
+                <td>
+                    <label>Select the admission type</label>
+                    <select class="menu">
+                        <option>select..</option>
+                        <option>check up</option>
+                        <option>diagnosis</option>
+                    </select>
+                </td>
+                <td>
+                    <label>Admission For</label>
+                    <select name="for" id="adfor" class="menu">
+                        <option>select..</option>
+                        <option>patient</option>
+                        <option>self</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <p class="des">**Select if you have any of the following below</p>
+                </td>
+            </tr>
+            <tr>
+                <td><input  class="check" type="checkbox">Cold</td>
+                <td><input  class="check" type="checkbox">Fever</td>
+                <td><input  class="check" type="checkbox">Cough</td>
+            </tr>
+            <tr>
+                <td><input  class="check" type="checkbox">Diapedesis</td>
+                <td><input  class="check" type="checkbox">Blood Pressure</td>
+                <td><input  class="check" type="checkbox">Heavy Surgery</td>
+            </tr>
+    
+            <!-- Personal info -->
+            <tr>
+                <th id="personal" colspan="3">Personal Information</th>
+            </tr>
+            <tr>
+                <td>Patient Name</td>
+                <td colspan="2"><input type="text" placeholder="Enter the patinet name"></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td colspan="2"><input type="text" placeholder="Enter the Phone Number"></td>
+            </tr>
+            <tr>
+                <td>Patient Name</td>
+                <td colspan="2"><input type="email" placeholder="Enter the email id"></td>
+            </tr>
+            <tr>
+                <td>Patient Name</td>
+                <td colspan="2"><input type="text" placeholder="Enter the age"></td>
+            </tr>
+            <tr>
+                <td>Adress</td>
+                <td colspan="2"><textarea name="adr" id="" wid></textarea></td>
+            </tr>
+    
+            <!-- Payment info -->
+            <tr>
+                <th id="payment_info" colspan="3">Payment Information</th>
+            </tr>
+            <tr>
+                <td>Select the payment type:</td>
+                <td><input type="radio" name="pay" class="rad">Card</td>
+                <td><input type="radio" name="pay" class="rad">Cash</td>
+            </tr>
+            <tr>
+                <td>Card Number</td>
+                <td colspan="2"><input type="text" placeholder="Enter the card number"></td>
+            </tr>
+            <tr>
+                <td>Cvv Number</td>
+                <td colspan="2"><input type="text" placeholder="Enter the cvv number"></td>
+            </tr>
+        </table>
+        <input type="submit" value="CONFIRM">
+    </div>
+    
+    
+    
+</body>
+</html>
